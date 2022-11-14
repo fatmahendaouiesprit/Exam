@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<h1 style="text-align:center;">Ajouter un Produit</h1>
+<form style="text-align:center;" method="POST" action="http://localhost:3000/product/addProduct">
+
+Libelle :<input type="text" name="Libelle" /><br>
+<br>
+Prix :<input type="number" name="Prix" /><br><br>
+Quantite :<input type="number" name="Quantite" /><br><br>
+
+ InStock :
+ 
+      <input type="radio" id="InStock" name="InStock" value="true"
+             >
+      <label >Oui</label>
+
+      <input type="radio" id="InStock" name="InStock" value="false">
+      <label >Non</label><br><br>
+
+
+Description <textarea type="text" name="Description" rows="4"></textarea><br><br>
+
+<button type="submit">Ajouter produit</button>
+
+</form>
+{% endblock %}

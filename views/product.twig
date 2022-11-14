@@ -1,0 +1,32 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+<table border="2" style="text-align:center;">
+
+<tr > <td > Libelle  </td>
+
+  <td > Prix  </td> 
+    <td > Description  </td> 
+  <td > Quantite  </td> 
+  <td > InStock  </td>   
+   <td >Delete   </td> 
+   </tr>
+
+
+
+{% for produit in Produits %}
+<tr > <td > {{ produit.Libelle }}  </td> 
+ <td > {{ produit.Prix }}  </td>  
+
+ <td > {{ produit.Description }}  </td>  
+ <td > {{ produit.Quantite }}  </td>  
+ <td > {{ produit.InStock }}  </td>  
+<td > 
+
+<a href="http://localhost:3000/product/deleteproduct/{{produit._id}}">Delete</a>
+
+ </td></tr>
+    {% endfor %}
+</table>
+{% endblock %}
